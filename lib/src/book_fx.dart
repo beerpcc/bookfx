@@ -184,11 +184,13 @@ class _BookFxState extends State<BookFx> with SingleTickerProviderStateMixin {
               clipper: isAlPath ? null : CurrentPaperClipPath(_p, isNext),
             ),
 
-            CustomPaint(
-              size: size,
-              painter: BookPainter(
-                _p,
-                widget.currentBgColor,
+            IgnorePointer(
+              child: CustomPaint(
+                size: size,
+                painter: BookPainter(
+                  _p,
+                  widget.currentBgColor,
+                ),
               ),
             ),
           ],
